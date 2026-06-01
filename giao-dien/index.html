@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển Văn Bản Thành Video</title>
+    <link rel="stylesheet" href="css/phong-cach.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Chuyển Văn Bản Thành Video</h1>
+            <p>Tạo video 2D phong cách cổ nhân từ văn bản của bạn - Hoàn toàn miễn phí!</p>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <form id="form-tao-video">
+                    <div class="form-group">
+                        <label for="van-ban">📝 Nhập Văn Bản:</label>
+                        <textarea id="van-ban" placeholder="Nhập kịch bản hoặc văn bản bạn muốn chuyển thành video..." rows="8"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ngon-ngu">🗣️ Chọn Ngôn Ngữ:</label>
+                        <select id="ngon-ngu">
+                            <option value="vi-VN">Tiếng Việt</option>
+                            <option value="en-US">Tiếng Anh</option>
+                            <option value="zh-CN">Tiếng Trung</option>
+                            <option value="ja-JP">Tiếng Nhật</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="toc-do">⚡ Tốc Độ Giọng Nói:</label>
+                        <input type="range" id="toc-do" min="0.5" max="2" step="0.1" value="1">
+                        <span id="hien-thi-toc-do">1x</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kieu-nhan-vat">👤 Kiểu Nhân Vật:</label>
+                        <select id="kieu-nhan-vat">
+                            <option value="co-nhan">Cổ Nhân</option>
+                            <option value="ninja">Ninja</option>
+                            <option value="quoc-su">Quốc Sư</option>
+                            <option value="vo-si">Võ Sĩ</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="nut-tao-video">
+                        ✨ Tạo Video
+                    </button>
+                </form>
+            </div>
+
+            <div class="preview-container">
+                <div id="preview-hoat-anh">
+                    <p>Preview hình ảnh sẽ hiển thị ở đây...</p>
+                </div>
+
+                <div class="thanh-tien-trinh">
+                    <div id="tien-trinh-bar"></div>
+                </div>
+                <p id="tien-trinh-text">Chưa bắt đầu</p>
+
+                <div id="video-container" style="display: none;">
+                    <video id="video-ket-qua" controls width="100%"></video>
+                    <button id="nut-tai-xuong" class="nut-tai-xuong">⬇️ Tải Video Xuống</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/am-thanh.js"></script>
+    <script src="js/hoat-anh.js"></script>
+    <script src="js/ung-dung.js"></script>
+</body>
+</html>
